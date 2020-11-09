@@ -5,7 +5,7 @@
   ## Deployed Website
   
   ![photos](https://user-images.githubusercontent.com/70293668/98510863-b5d31080-2218-11eb-8598-165946ca8fea.JPG)
-  ![https://vpasamic.github.io/employee-directory/](https://vpasamic.github.io/employee-directory/)
+  [Deployed App](https://vpasamic.github.io/employee-directory/)
   
   ## Table of Contents
   - [Description](#Description)
