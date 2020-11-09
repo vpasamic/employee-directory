@@ -1,26 +1,27 @@
-import React from "react";
-import Main from "./components/Main";
-import Wrapper from "./components/Wrapper";
-import Header from "./components/Header";
+import React, { useState } from 'react';
+import Wrapper from "./components/Wrapper"
+import Header from "./components/Header"
 
 function App() {
+  const [query, setQuery] = useState("");
+
+  function handleSearch (event) {
+    event.preventDefault();
+    setQuery(event.target.value.trim());
+  }
+
+  function clearSearchBar (event) {
+    if (event.currentTarget.parentElement.search) {
+      event.currentTarget.parentElement.search.value = "";
+      setQuery("");
+    }
+  }
+  console.log(query)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Wrapper>
+      <Header handleSearch={handleSearch}
+      clearSearchBar={clearSearchBar}/>
+    </Wrapper>
   );
 }
 
