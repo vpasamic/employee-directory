@@ -2,12 +2,12 @@ import React from "react";
 
 function Header(props) {
   return (
-    <div class="jumbotron">
-      <h1 class="display-4">Employee Tracker</h1>
-      <p class="lead"></p>
-      <div class="row">
-        <div class="col"></div>
-        <div class="col">
+    <div className="jumbotron">
+      <h1 className="display-4">Employee Tracker</h1>
+      <p className="lead"></p>
+      <div className="row">
+        <div className="col"></div>
+        <div className="col">
         <nav
           className="navbar"
           onSubmit={(e) => e.preventDefault()}
@@ -32,7 +32,7 @@ function Header(props) {
           </form>
         </nav>
         </div>
-        <div class="col"></div>
+        <div className="col"></div>
       </div>
     </div>
   );

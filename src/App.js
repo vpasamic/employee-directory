@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Wrapper from "./components/Wrapper"
 import Header from "./components/Header"
-
+import Mainpage from "./components/Mainpage"
 function App() {
   const [query, setQuery] = useState("");
 
@@ -21,6 +21,7 @@ function App() {
     <Wrapper>
       <Header handleSearch={handleSearch}
       clearSearchBar={clearSearchBar}/>
+      <Mainpage query={query}/>
     </Wrapper>
   );
 }
