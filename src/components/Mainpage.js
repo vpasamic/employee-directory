@@ -5,7 +5,7 @@ import TableHeaders from "./TableHeaders";
 
 class Mainpage extends Component {
     state = {
-        sortBy: "lastName",
+        sortBy: "firstName",
         order: "descending",
         search: this.props.query,
         employees: []
