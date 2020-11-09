@@ -5,7 +5,7 @@ import TableHeaders from "./TableHeaders";
 
 class Mainpage extends Component {
     state = {
-        sortBy: "firstName",
+        sortBy: "lastName",
         order: "descending",
         search: this.props.query,
         employees: []
@@ -23,7 +23,8 @@ class Mainpage extends Component {
           search: nextProps.query,
         };
       }
-    handleBtnClick = event => {
+
+    handleBtnClick = (event) => {
         (this.state.sortBy !== event.target.name) || (this.state.order === "ascending") ? this.setState({ order: "descending" }) : this.setState({ order: "ascending" });
         this.setState({ sortBy: event.target.name })
       }
@@ -51,12 +52,14 @@ class Mainpage extends Component {
        return(
         <div>
             <TableHeaders
-            handleleBtnClick={this.handleBtnClick}
+            handleBtnClick={this.handleBtnClick}
             sortBy={this.state.sortBy}
             order={this.state.order}
             />
            <TableContents 
             employees= {this.searchEmployees()}
+            sortBy={this.state.sortBy}
+            order={this.state.order}
             />
         
         </div>
